@@ -1,0 +1,56 @@
+Day 1: HTML structure + semantic elements
+
+- Document structure: DOCTYPE, html, head, body
+- Semantic tags: header, nav, main, section, article, aside, footer
+- Why semantics matter for SEO and accessibility
+- Difference: div/span vs semantic elements
+
+- Code a blog homepage layout in pure HTML — no CSS yet
+- Must use: nav, header, main, 3 article cards, footer
+- Add a proper page title and meta description
+
+Day 2: Text, links, images, lists
+
+- Headings hierarchy (h1–h6) — only one h1 per page
+- Anchor tags: href, target, rel attributes
+- img: src, alt (non-negotiable), width, height
+- ul, ol, li, dl, dt, dd
+
+
+- Add real content to yesterday's blog page
+- 3 blog post cards with image, heading, paragraph, 'Read more' link
+- Navigation with 4 internal links
+- Footer with an unordered list of social links
+
+Day 3: Forms — the most important HTML topic
+
+- form, input types: text, email, password, number, date, checkbox, radio, file
+- label (always pair with input via for/id), required, placeholder
+- select, textarea, button types
+- fieldset and legend for grouping
+
+- Build a complete job application form from scratch
+- Fields: name, email, phone, position (select), cover letter (textarea), upload CV (file), T&C (checkbox)
+- All inputs must have labels. No label = broken.
+- Rule: Forms are tested in every frontend interview. Know every input type cold.
+
+Day 4: Tables + media elements
+
+- table, thead, tbody, tfoot, tr, th, td
+- colspan and rowspan
+- video, audio, iframe basics
+- figure, figcaption
+
+- Add a pricing comparison table to your blog page (3 plans × 5 features)
+- Use colspan for the table header row
+- Embed a YouTube iframe in one blog post
+
+Days 6–7:BWeekend build — full HTML project
+
+-bBuild a restaurant website: Home, Menu, About, Contact pages
+-bHome: hero section, 3 featured dishes, testimonials section
+-bMenu page: table or list with categories, names, prices
+- Contact: full form (name, email, booking date, party size, message)
+- No CSS allowed. Pure semantic HTML only.
+ - Push to GitHub with a proper README
+- Rule: If it takes only 3 hours, you did it wrong. Go deeper.
