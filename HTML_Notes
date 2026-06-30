@@ -1,0 +1,502 @@
+HTML - HTML stands for HyperText Markup Language
+
+Think of constructing a house:
+HTML = Structure (Walls, Doors, Windows)
+CSS = Interior Design
+JavaScript = Electricity, Fans, AC, Smart Devices
+
+Without HTML - No Website
+Without CSS - Ugly Website
+Without JavaScript - Static Website
+
+HTML Complete Industry Cheat Sheet
+ Topic           What is it?                Enduku                     Best Practice              Common Mistake                        |
+ HTML       | HyperText Markup Language | Creates webpage structure | Use semantic HTML      | Treating HTML as programming language |
+ CSS        | Styling language          | Makes webpage beautiful   | Separate CSS file      | Inline styling everywhere             |
+JavaScript  | Programming language      | Adds interactivity        | Modular code           | Mixing HTML & JS                      |
+
+
+How Browser Understands HTML
+When you open: https://algonex.com
+Browser
+↓
+Downloads HTML
+↓
+Creates DOM (Document Object Model)
+    ↓
+Downloads CSS
+    ↓
+Downloads JS
+↓
+Renders Page # So HTML is the first file every browser reads
+
+Real Industry Folder Structure
+Frontend/
+│
+├── assets/
+│   ├── images/
+│   ├── videos/
+│   └── icons/
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── app.js
+│
+├── pages/
+│   ├── about.html
+│   ├── contact.html
+│   └── services.html
+│
+└── index.html
+
+## Your First HTML File (index.html)
+# Why index.html?
+Because almost every web server treats it as the default entry page
+
+## HTML Boilerplate
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+<body>
+</body>
+</html> # Don't memorize it, Understand it
+
+1.<!DOCTYPE html> -- Tells browser Use HTML5
+2. <html lang="en"> -- Root element
+Everything lives inside it (lang="en")
+Helps
+Google
+Screen Readers
+SEO
+Accessibility
+
+3. <head> -- Not visible
+# It contains Contains
+Title
+CSS
+Meta Tags
+Fonts
+Icons
+SEO
+
+Code                       Purpose                 
+ <!DOCTYPE html> | Tells browser to use HTML5
+ <html>          | Root element               
+ <head>          | Metadata                   
+ <body>          | Visible content            
+
+
+4. <meta charset="UTF-8"> -- Supports almost every language
+# Without UTF-8
+₹
+हिंदी
+తెలుగు
+日本語 -> may appear as broken symbols
+
+5.<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+'''Makes website responsive
+Without it -> Mobile layout becomes zoomed out'''
+
+6.<title>
+-Appears
+- Browser Tab
+- Google Search
+- Bookmarks
+
+# Head Section
+ Tag                       Purpose                 Real Example  
+<title>                | Browser title          | Amazon India  
+<meta charset="UTF-8"> | Supports all languages | Hindi, Telugu 
+<meta viewport>        | Responsive Design      | Mobile phones 
+<link>                 | Connect CSS            | style.css     
+<script>               | Connect JS             | app.js        
+<favicon>              | Website icon           | Amazon Logo   
+
+7. <body>
+# Everything user sees..
+Images
+Buttons
+Forms
+Cards
+Tables
+Videos
+Navbar
+Footer
+
+# Body Section
+Element      Used For         Example       
+ Header  | Top navigation | Amazon Navbar 
+ Main    | Main content   | Products      
+ Footer  | Bottom area    | Copyright     
+
+# Heading Tags
+ Tag  Purpose             SEO Importance 
+ h1  | Main heading     | * * * * * (One page -> One H1)    
+ h2  | Section heading  | * * * *           
+ h3  | Sub heading      | * * *            
+ h4  | Small heading    | * *             
+ h5  | Minor heading    | *              
+ h6  | Smallest heading | *              
+
+# Anatomy of HTML Tag
+<h1>Hello</h1>
+
+# Empty Elements - No closing tag
+<br>
+<hr>
+<img>
+<input>
+<meta>
+<link>
+
+## HTML Attributes(Attributes give extra information)
+<img src="cat.jpg" alt="Cute Cat" width="300">
+-> src, alt, width are attributes
+
+## Comments - To write description like in python 
+<!-- Navbar Starts -->
+<!-- Footer Ends -->
+
+Block Elements - Take entire width
+-> div
+-> p
+-> section
+-> article
+-> header
+-> footer
+-> main
+-> nav
+-> form
+-> table
+
+# Text Tags
+ Tag       Purpose           Example     
+ p      | Paragraph      | Description 
+ strong | Important Text | Price       
+ em     | Emphasis       | Warning     
+ mark   | Highlight      | Offer       
+ small  | Small Text     | Terms       
+ del    | Deleted Text   | Old Price   
+ ins    | Inserted Text  | New Price   
+ sub    | Subscript      | H₂O         
+ sup    | Superscript    | x²          
+
+# Container Tags
+ Tag    Display    Use Case         
+ div  | Block   | Layout Container 
+span | Inline   | Highlight word   
+
+# Block Elements - Take Full Width
+Element      Real Example  
+ div     | Product Card  
+ section | Hero Section  
+ article | Blog          
+ header  | Navbar        
+ footer  | Footer        
+nav       | Navigation    
+ main    | Main Content  
+ aside   | Sidebar       
+ form    | Login Form    
+table   | Employee Data 
+
+
+## Inline Elements (Take only required/needed width)
+-> span
+-> a
+-> strong
+-> em
+-> img
+-> label
+-> button
+
+ Element   Example       
+span    | Highlight     
+a       | Hyperlink     
+img     | Product Image 
+strong  | Bold          
+em      | Italic        
+button  | Buy Now       
+
+## Headings
+<h1>Main Title</h1>
+<h2>Section</h2>
+<h3>Subsection</h3>
+<h4>Topic</h4>
+<h5>Mini Topic</h5>
+<h6>Small Heading</h6>
+-> Use one <h1> per page for the primary page heading. Structure the rest with <h2>–<h6>
+
+# iLaa rayodhu
+<h1>Home</h1>
+<h1>About</h1>
+<h1>Contact</h1>
+
+# Better to write like this
+<h1>Amazon Clone</h1>
+<h2>Electronics</h2>
+<h2>Fashion</h2>
+<h2>Books</h2>
+
+# Paragraph
+<p> This is paragraph </p>
+
+# Line Break - <br>
+Avoid using <br> to create spacing between sections. Use CSS margins instead
+
+# Horizontal Line - <hr>
+Useful for thematic breaks, not just decoration
+
+# Text Formatting
+<strong>Important</strong> - Bold
+<em>Warning</em> - Italic (emphasis)
+<mark>Sale</mark> - Highlight
+<small>Terms Apply</small> - Small
+<del>₹1000</del> - Deleted
+<ins>₹800</ins> - Inserted
+H<sub>2</sub>O - Subscript
+x<sup>2</sup> - Superscript 
+# Prefer semantic tags (<strong>, <em>) over purely visual tags (<b>, <i>)
+
+# Div - Most common HTML element
+<div>
+
+</div>
+# Container -> Everything goes inside
+<div>
+<h2>iPhone</h2>
+<p>₹80,000</p>
+<button>Buy Now</button>
+</div>
+
+# Span - Inline container
+<p> Price
+<span>₹999</span>
+</p>
+
+## Lists
+# Ordered 
+<ol>
+<li>HTML</li>
+<li>CSS</li>
+<li>JS</li>
+</ol>
+
+# Unordered
+<ul>
+<li>Apple</li>
+<li>Mango</li>
+<li>Orange</li>
+</ul>
+
+# Links
+<a href="https://google.com">
+Google
+</a>
+
+# Open new tab
+<a
+href="https://google.com"
+target="_blank"
+rel="noopener noreferrer">
+Google
+</a> -> Always pair target="_blank" with rel="noopener noreferrer" for security
+
+# Images
+<img src="image.jpg" alt="Product Image">
+-> The alt attribute helps users with screen readers and displays when the image can't load
+
+## Semantic HTML (Comapny's usecase)
+ Tag      Real Website Example 
+header  | Amazon Header        
+nav     | Menu                 
+main    | Product List         
+section | Categories           
+article | Blog Card            
+aside   | Advertisement        
+footer  | Copyright            
+
+# Before HTML5
+div
+div
+div
+div
+div -> Impossible to understand
+
+<header>
+<nav>
+<main>
+<section>
+<article>
+<aside>
+<footer>  -> Now developers immediately understand the layout kadaa
+
+## Real Website Structure
+<body>
+<header>
+<nav>
+Logo
+Menu
+</nav>
+</header>
+<main>
+<section> Hero\ </section>
+<section> Products </section>
+<section> Testimonials </section>
+</main>
+
+<footer> Copyright </footer>
+</body>
+
+## Lists
+Type       Tag    Example 
+Ordered   | ol  | Ranking 
+Unordered | ul  | Skills  
+Item      | li  | HTML    
+
+# Links
+ Attribute                     Purpose      
+ href                      | Destination  
+ target="_blank"           | Open New Tab 
+rel="noopener noreferrer" | Security     
+# Example
+<a href="https://google.com" target="_blank" rel="noopener noreferrer"> Google </a>
+
+# Images
+ Attribute    Purpose       
+ src      | Image Path    
+alt       | Accessibility 
+width     | Width         
+height    | Height        
+# Example
+<img src="phone.jpg" alt="iPhone 16">
+
+# Tables
+ Tag     Purpose 
+table | Table   
+ tr   | Row     
+ th   | Heading 
+ td   | Data    
+thead | Header  
+tbody | Data    
+tfoot | Footer  
+
+# Forms
+ Tag           Purpose        
+ form    | Form Container 
+input    | User Input     
+label    | Field Name     
+textarea | Large Text     
+select   | Dropdown       
+option   | Dropdown Item  
+button   | Submit         
+
+# Input Types
+ Type            Example       
+ text          | Name          
+ email         | Email         
+password       | Password      
+number         | Age           
+tel            | Phone         
+url            | Website       
+date           | DOB           
+time           | Time          
+datetime-local | Meeting       
+radio          | Gender        
+checkbox       | Skills        
+file           | Upload Resume 
+color          | Theme         
+range          | Volume        
+search         | Search Bar    
+hidden         | Hidden Data   
+submit         | Submit Button 
+reset          | Reset Form    
+
+# Form Attributes
+Attribute        Purpose        
+ action      | Backend URL    
+ method      | GET/POST       
+ required    | Mandatory      
+ placeholder | Hint           
+ minlength   | Minimum Length 
+ maxlength   | Maximum Length 
+ readonly    | Read Only      
+ disabled    | Disable Field  
+ autofocus   | Auto Focus     
+
+# Media Tags
+Tag            Purpose       
+ img        | Image         
+ audio      | Audio         
+ video      | Video         
+ iframe     | YouTube       
+ figure     | Image Group   
+ figcaption | Image Caption 
+
+Question                               Expected Answer                                                       
+ What is HTML?                  | Structure of webpage                                                  
+HTML vs HTML5?                 | HTML5 adds semantic elements, multimedia, improved APIs               
+Why DOCTYPE?                   | Enables standards mode (HTML5)                                        
+Why Semantic HTML?             | SEO + Accessibility + Maintainability                                 
+Difference div vs span?        | Block vs Inline                                                       
+Difference id vs class?        | Unique vs Reusable                                                    
+Why alt attribute?             | Accessibility + fallback if image fails                               
+Why viewport?                  | Mobile responsiveness                                                 
+Difference section vs article? | 'section' groups related content; 'article' is self-contained content 
+Why one h1?                    | Clear document hierarchy for users and search engines                 
+
+
+## What a frontend developer actually uses daily
+Used Every Day   Used Sometimes       Rarely Used           
+ div          | table              | marquee 
+ section      | audio              | center
+ header       | video              | font   
+ main         | iframe             | frameset
+ footer       | figure             | big    
+ nav          | details            | blink (never use)   
+ form         | summary      
+ input       
+ button      
+ label       
+ img        
+ a            
+ ul / li   
+
+### Common HTML Mistakes
+-> Using <div> for everything
+-> Skipping alt on images
+-> Using headings only to make text bigger
+-> Using <br> for layout spacing
+-> Not using semantic elements
+-> Forgetting the viewport meta tag
+-> Nesting elements incorrectly
+-> Ignoring accessibility
+
+# Create a single-page profile using only HTML (no CSS or JavaScript) that includes:
+1. A semantic page structure (header, main, section, footer)
+2. Your name as the only <h1>
+3. A short introduction paragraph
+4. A profile image with meaningful alt text
+5. A skills list using <ul>
+6. A projects section using <article> elements
+7. A contact section with clickable email and LinkedIn links
+8. A footer with the current year and your name
+
+## Before moving to CSS, you should be able to answer these questions confidently
+-> Why do we use <!DOCTYPE html>?
+-> What is the purpose of the <head> element?
+-> Why is the viewport meta tag important?
+-> What's the difference between block and inline elements?
+-> When should you use <section> instead of <div>?
+-> Why should every image have an alt attribute?
+-> Why should there usually be only one <h1> on a page?
+-> What makes HTML semantic, and why does it matter for accessibility and SEO?
+
