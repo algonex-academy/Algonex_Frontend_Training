@@ -1,0 +1,205 @@
+Frontend development is about solving UI problems
+
+Today's Project
+
+We're building a Personal Portfolio Website(Every frontend developer has one)
+By the end of HTML, it will look like this (without CSS)
+
+LOGO
+Home
+About
+Skills
+Projects
+Contact
+
+Hello,
+I'm Ganesh
+Frontend Developer
+[Hire Me]
+
+About Me
+
+I love building websites...
+
+Skills
+HTML
+CSS
+JavaScript
+React
+Python
+Django
+
+Projects
+Project 1
+Project 2
+Project 3
+
+Contact
+Email
+Phone
+LinkedIn
+GitHub
+
+Footer
+© 2026 Ganesh
+
+### Notice something?: No CSS, No colors, No fancy design
+Only HTML -> That's intentional
+
+Step 1 - Create a folder(portfolio)
+portfolio/
+|-- index.html
+
+Step 2 - Type ! and press Tab (if Emmet is enabled), you'll get
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganesh Portfolio</title>
+</head>
+<body>
+
+</body>
+</html>
+
+ Line               Purpose              
+ <!DOCTYPE html> | HTML5 Standard       
+<html>          | Root of webpage      
+<head>          | Metadata             
+<body>          | Everything users see 
+
+## Step 3 - Let's build the Header
+Every website starts with what?(Logo, Navigation)
+Instead of using:
+<div>
+</div>
+
+Use semantic HTML:
+<header>
+<h2>Ganesh</h2>
+</header>
+## Because the main page heading (h1) should describe the page content
+Your name in the navigation acts more like a site logo
+
+## Step 4 - Navigation
+How many pages?
+Home
+About
+Skills
+Projects
+Contact # Navigation is a list
+-> Lists use ul li - Each item links somewhere
+-> Links use a
+
+## Build it like this:
+<header>
+<h2>Ganesh</h2>
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Skills</a></li>
+<li><a href="#">Projects</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+header
+│
+├── h2 (Site Name)
+│
+└── nav                         This is how you'll see navigation structured in professional projects
+     │
+     └── ul
+          │
+          ├── li
+          │    │
+          │    └── a
+
+## Step 5 - Hero Section(The first visible content)
+Hello
+I'm Ganesh                  <section>
+Frontend Developer              </section>
+Button
+
+<section>
+<h1>Hello, I'm Ganesh</h1>
+<p>Frontend Developer</p>
+<button>Hire Me</button>
+</section>
+
+## Current HTML
+<body>
+<header>
+<h2>Ganesh</h2>
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Skills</a></li>
+<li><a href="#">Projects</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+</header>
+<section>
+<h1>Hello, I'm Ganesh</h1>
+<p>Frontend Developer</p>
+<button>Hire Me</button>
+</section>
+</body>
+
+ Concept       Why We Used It           
+header  | Top section of the page  
+nav     | Navigation area          
+ul      | Navigation is a list     
+li      | Each navigation item     
+a       | Links to pages/sections  
+section | Groups related content   
+h1      | Main heading of the page 
+h2      | Site logo/name           
+p       | Short description        
+button  | Call-to-action           
+
+
+Mini Challenge (Don't Skip SPARK)
+Without looking back, add cheyandi:
+1.An About section with:
+    -An <h2> heading
+    - A paragraph introducing yourself
+2.A Skills section with:
+    -An <h2> heading
+    -An unordered list of at least five skills
+3. A Projects section with:
+    -An <h2> heading
+    -Three <article> elements, each containing:
+          - An <h3> project title
+          - A short description
+          - A "View Project" link
+
+ Fature                   HTML Concepts                              
+ Navbar              |  <header>, <nav>, <ul>, <li>, <a> 
+Dashboard           | <main>, <section>                      
+Employee Cards      | <article>, <div>                      
+Employee Table      | <table>                                  
+ Employee Form       | <form>                                  
+Resume Upload       | <input type="file">                     
+Department Dropdown | <select>                                 
+Footer              | <footer>                                 
+Images              | <img>                                   
+Accessibility       | <label>, alt, semantic HTML            
+
+Folder Structure chudandii(This mirrors how multi-page sites were traditionally organized and is still useful for learning HTML before moving to React)
+employee-portal/
+│
+├── index.html
+├── employees.html
+├── add-employee.html
+├── attendance.html
+├── payroll.html
+│
+├── assets/
+    ├── images/
+    └── icons/
