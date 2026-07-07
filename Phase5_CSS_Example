@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -368,7 +366,7 @@
 
     <header>
         <div class="container">
-            <h1>🚀 Software Engineer Fresher - Dev Blog</h1>
+            <h1>Software Engineer Fresher Annesha patane - Dev Blog</h1>
             
             <div class="header-content">
                 <!-- Image Tag -->
@@ -385,7 +383,7 @@
                 <!-- Figure and Figcaption -->
                 <figure>
                     <img src="https://via.placeholder.com/100" alt="Code Sample">
-                    <figcaption>💻 Code Examples</figcaption>
+                    <figcaption>Code Examples </figcaption>
                 </figure>
             </div>
 
@@ -402,13 +400,13 @@
             </audio>
 
             <!-- Output Tag -->
-            <output id="result">✅ Output: 5 + 3 = 8</output>
+            <output id="result">Output: 5 + 3 = 8</output>
         </div>
     </header>
 
     <main>
         <div class="container">
-            <h2>📚 Languages to Master as a Fresher</h2>
+            <h2> Languages to Master as a Fresher</h2>
             <ol>
                 <li>JavaScript - Web Development</li>
                 <li>Python - Data Structures & Algorithms</li>
