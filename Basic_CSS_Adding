@@ -1,0 +1,52 @@
+### First create a  file name as :Style.css
+
+/* Body Selector */
+body{
+    background-color: lightblue;
+}
+
+/* Heading 1 Selector */
+h1{
+    color: red;
+    text-align: center;
+}
+
+/* Heading 2 Selector */
+h2{
+    color: blue;
+}
+
+/* Paragraph Selector */
+p{
+    color: green;
+    font-size: 20px;
+}
+
+/* Div Selector */
+div{
+    background-color: yellow;
+    width: 300px;
+    height: 80px;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+/* Span Selector */
+span{
+    color: purple;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Button Selector */
+button{
+    background-color: green;
+    color: white;
+    padding: 10px;
+}
+
+/* Button Hover */
+button:hover{
+    background-color: red;
+}
+
