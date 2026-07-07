@@ -1,0 +1,148 @@
+CSS -> styling/appearance (It tells the browser how things should look)
+
+Example:
+h1 {
+  color: green;
+  font-size: 32px;
+}
+button {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+
+=> So HTML creates the structure and CSS makes it beautiful and professional
+Most beginners make this mistake Algonex Trainees:
+They learn: <h1>, <p>, <div> and thehen immediately jump to JavaScript, React, Bootstrap, Tailwind, etc.
+
+Before React, you must know:
+- HTML structure
+- CSS box model
+- Flexbox
+- Grid
+- Responsive design
+- Forms
+- Layouts
+Real-world UI sections
+## If you cannot build a login page, dashboard card, navbar, formand responsive layout using raw HTML/CSS, React will feel confusing
+
+### Phase 2: CSS basics
+# CSS has this structure:
+selector {
+  property: value;
+}
+
+# Example:
+h1 {
+  color: blue;
+} -> Ikkada this means: select all h1 elements and make them blue
+
+### Three ways to add CSS
+1. Inline CSS
+<h1 style="color: red;">Hello</h1>   [Do not use this much bcz it becomes messy]
+
+2. Internal CSS
+<style>
+  h1 {
+    color: red;
+  }
+</style> -> Okay for practice anthee
+
+3. External CSS
+Best industry approach antaam
+## HTML file:
+<link rel="stylesheet" href="style.css">
+
+## CSS file:
+h1 {
+  color: red;
+} -> This is what you should use
+
+Saree oka example chudhama: Styled login page
+Create two files: index.html, style.css
+# index.html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="login-card">
+      <h1>Welcome Back</h1>
+      <p>Please login to continue</p>
+
+      <form>
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email">
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password">
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+# styple.css
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-card {
+  background-color: white;
+  width: 350px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #006241;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004c32;
+}
+
