@@ -278,7 +278,10 @@ Sections:
 - Kubernetes request card
 - Pending approvals card
 - Recent activity table
-- Contact support form => This will connect directly with your real work experience and make learning more meaningful
+- Contact support form       => This will connect directly with your real work experience and make learning more meaningful
+-> Responsive design for mobile/tablet
+-> Clean industry-style dashboard UI
+-> HTML and CSS kept separate
 
 Folder structure ILAA UNDAALI folks
 Create this:
@@ -287,4 +290,9 @@ html-css-practice/
   style.css      -> Always keep HTML and CSS separate
   images/ 
 
-Check another file for source code Trainees
+Check another zip file(html-css-practice.zip) attached for source code Trainees
+## How to open:
+- Download and unzip the file
+- Open the html-css-practice folder in VS Code
+- Open index.html
+- Right-click and choose Open with Live Server ,oknaa ardamkapothee contact Ganesh Pasala
