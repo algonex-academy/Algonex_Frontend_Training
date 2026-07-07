@@ -19,15 +19,15 @@ JavaScript  | Programming language      | Adds interactivity        | Modular co
 How Browser Understands HTML
 When you open: https://algonex.com
 Browser
-↓
+ |
 Downloads HTML
-↓
+  |
 Creates DOM (Document Object Model)
-    ↓
+    |
 Downloads CSS
-    ↓
+    |
 Downloads JS
-↓
+   |
 Renders Page # So HTML is the first file every browser reads
 
 Real Industry Folder Structure
