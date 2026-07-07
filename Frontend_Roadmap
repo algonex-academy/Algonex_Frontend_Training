@@ -1,4 +1,4 @@
-Day 1: HTML structure + semantic elements
+Day 1: HTML structure + semantic elements (html, head, body, h1-h6, p, a, img, button, ul, ol, li)
 
 - Document structure: DOCTYPE, html, head, body
 - Semantic tags: header, nav, main, section, article, aside, footer
@@ -22,7 +22,7 @@ Day 2: Text, links, images, lists
 - Navigation with 4 internal links
 - Footer with an unordered list of social links
 
-Day 3: Forms — the most important HTML topic
+Day 3: Forms — the most important HTML topic (form, label, input, textarea, select, button)
 
 - form, input types: text, email, password, number, date, checkbox, radio, file
 - label (always pair with input via for/id), required, placeholder
@@ -35,22 +35,76 @@ Day 3: Forms — the most important HTML topic
 - Rule: Forms are tested in every frontend interview. Know every input type cold.
 
 Day 4: Tables + media elements
-
 - table, thead, tbody, tfoot, tr, th, td
 - colspan and rowspan
 - video, audio, iframe basics
 - figure, figcaption
 
-- Add a pricing comparison table to your blog page (3 plans × 5 features)
+- Add a pricing comparison table to your blog page (3 plans ×5 features)
 - Use colspan for the table header row
 - Embed a YouTube iframe in one blog post
 
 Days 6–7:BWeekend build — full HTML project
-
--bBuild a restaurant website: Home, Menu, About, Contact pages
+-Build a restaurant website: Home, Menu, About, Contact pages
 -bHome: hero section, 3 featured dishes, testimonials section
--bMenu page: table or list with categories, names, prices
+-Menu page: table or list with categories, names, prices
 - Contact: full form (name, email, booking date, party size, message)
 - No CSS allowed. Pure semantic HTML only.
  - Push to GitHub with a proper README
 - Rule: If it takes only 3 hours, you did it wrong. Go deeper.
+
+### Wee2- Day1: 
+- colors
+- fonts
+- backgrounds
+- margin
+- padding
+- border
+- border-radius
+- box-shadow
+
+Build: Style your login page beautifully
+
+## Day2: Box model and display
+- block
+- inline
+- inline-block
+- box-sizing
+- width
+- height
+
+# Build:
+- Profile card
+- Product card
+- Notification card
+
+## Day 5: Flexbox
+- display: flex
+- justify-content
+- align-items
+- gap
+- flex-direction
+
+# Build:
+-Navbar
+-Three dashboard cards
+-Button group
+
+## Day 6: CSS Grid
+- display: grid
+- grid-template-columns
+- gap
+
+Trainee Build: A 6-card dashboard layout
+
+## Day 7: Responsive design
+Learn: media queries antaam
+
+Example:
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+}
+
+Build entantee: Make your dashboard mobile-friendly
