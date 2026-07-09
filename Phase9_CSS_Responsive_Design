@@ -1,0 +1,50 @@
+Responsive Design?: Responsive Design is the practice of creating websites that provide a good user experience on any device without requiring separate desktop and mobile versions.
+
+Instead of creating:
+- Desktop website
+-Tablet website
+-Mobile website
+-> You create one website that adjusts its layout based on the available screen size
+
+Enduku Responsive Design Important? - Imagine you're building an e-commerce site
+
+# On a desktop:
+----------------------------------------
+Logo      Search Bar        Login
+----------------------------------------
+Product 1   Product 2   Product 3   Product 4
+
+# But On a phone ilaa untundi:
+Logo
+Search Bar
+Login
+Product 1
+Product 2
+Product 3
+Product 4 -> The same HTML is used, but the layout changes with CSS
+
+### CSS Units -> Idi define the size of elements such as width, height, margin, padding, font-size, and spacing
+There are two main categories:
+CSS Units
+│
+├── Absolute Units
+│      ├── px
+│      ├── cm
+│      ├── mm
+│      ├── in
+│      ├── pt
+│      └── pc
+│
+└── Relative Units
+       ├── %
+       ├── em
+       ├── rem
+       ├── vw
+       ├── vh
+       ├── vmin
+       ├── vmax
+       ├── ch
+       ├── ex
+       └── fr
+
+1. Pixels (px)
