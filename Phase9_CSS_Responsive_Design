@@ -48,3 +48,774 @@ CSS Units
        └── fr
 
 1. Pixels (px)
+# CSS
+.box {
+    width: 300px;
+    height: 150px;
+}
+- Fixed size
+- Does not scale automatically with parent size
+- Good for borders, icons, and small UI elements
+
+## Example
+# HTML 
+<div class="box"></div>
+
+# CSS
+.box {
+    width: 200px;
+    height: 100px;
+    background: blue;
+}
+
+# 2. Percentage (%) - Relative to the parent element
+# HTML
+<div class="parent">
+    <div class="child"></div>
+</div>
+
+# CSS
+.parent {
+    width: 600px;
+}
+.child {
+    width: 50%;
+}
+
+# Calculation: 50% of 600px = 300px
+Useful for:
+- Responsive layouts
+- Widths
+- Heights (when the parent has a defined height)
+
+# 3. em - Relative to the parent's font size
+# CSS
+.parent {
+    font-size: 20px;
+}
+
+.child {
+    font-size: 2em;
+}
+Result: 2 × 20px = 40px
+
+# Nested elements can compound:
+# CSS
+.parent {
+    font-size: 20px;
+}
+.child {
+    font-size: 2em;
+}
+.grandchild {
+    font-size: 2em;
+}
+
+Parent = 20px
+Child = 40px
+Grandchild = 80px
+-> This compounding is why em requires careful use
+
+1. Universal Selector (*)
+Selects every element on the page
+
+# HTML
+<h1>Heading</h1>
+<p>Paragraph</p>
+<button>Click Me</button>
+# CSS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+-> Used in almost every professional project as a CSS reset
+
+2. Element (Tag) Selector - Targets every occurrence of a specific HTML tag
+# HTML
+<h1>Heading</h1>
+<h1>Another Heading</h1>
+<p>Paragraph</p>
+# CSS
+h1 {
+    color: red;
+}
+
+p {
+    color: green;
+}
+3. Class Selector (.) - One of the most commonly used selectors
+# HTML
+<h1 class="title">Welcome</h1>
+<h2 class="title">Frontend</h2>
+# CSS
+.title {
+    color: blue;
+}
+-> Both elements are styled
+
+4. ID Selector (#) - Targets a single unique element
+# HTML
+<h1 id="main-title">
+    Welcome
+</h1>
+# CSS
+#main-title {
+    color: purple;
+}
+
+-> IDs should generally be unique within a page.
+
+5. Multiple Classes
+# HTML
+<button class="btn primary">
+    Login
+</button>
+# CSS
+.btn {
+    padding: 10px;
+}
+
+.primary {
+    background: blue;
+} -> The button gets styles from both classes
+
+6. Group Selector (,) - Apply the same styles to multiple selectors
+# HTML
+<h1>Heading</h1>
+<h2>Heading 2</h2>
+<p>Paragraph</p>
+# CSS
+h1,
+h2,
+p {
+    color: green;
+}
+7. Descendant Selector (space) - Targets elements inside another element at any depth
+# HTML
+<div>
+    <p>Hello</p>
+</div>
+# CSS
+div p {
+    color: blue;
+} -> Works even if the <p> is nested several levels deep
+
+8. Child Selector (>) - Targets only direct children
+# HTML
+<div>
+    <p>Direct Child</p>
+    <section>
+        <p>Nested Child</p>
+    </section>
+</div>
+# CSS
+div > p {
+    color: red;
+} -> Only the first <p> is selected
+
+9. Adjacent Sibling Selector (+) - Targets the immediate next sibling
+# HTML
+<h1>Heading</h1>
+<p>Paragraph</p>
+<p>Another Paragraph</p>
+# CSS
+h1 + p {
+    color: blue;
+}
+-> Only the first paragraph is selected
+
+10. General Sibling Selector (~) - Targets all following siblings
+
+# HTML
+<h1>Heading</h1>
+<p>One</p>
+<p>Two</p>
+<p>Three</p>
+# CSS
+h1 ~ p {
+    color: green;
+} -> All paragraphs after the <h1> are selected
+
+11. Attribute Selector
+# HTML
+<input type="text">
+<input type="password">
+
+# CSS
+input[type="text"] {
+    border: 2px solid blue;
+}
+12. Attribute Contains
+# HTML
+<a href="https://google.com">
+Google
+</a>
+# CSS
+a[href*="google"] {
+    color: red;
+}
+*= means "contains"
+
+13. Attribute Starts With (^=)
+a[href^="https"] {
+    color: green;
+}
+
+# Matches values that start with https
+
+14. Attribute Ends With ($=)
+img[src$=".png"] {
+    border: 2px solid red;
+} -> Matches values ending in .png
+
+15. First Child
+# HTML
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+</ul>
+# CSS
+li:first-child {
+    color: red;
+}
+
+16. Last Child
+li:last-child {
+    color: blue;
+}
+
+17. nth-child()
+li:nth-child(2) {
+    color: green;
+} -> Selects the second child
+
+Even items: li:nth-child(even)
+
+Odd items: li:nth-child(odd)
+
+# Every third item:
+li:nth-child(3n)
+18. nth-of-type()
+p:nth-of-type(2) {
+    color: orange;
+}
+
+-> Counts only <p> elements, ignoring other tag types.
+
+19. Not Selector (:not)
+<p class="active">One</p>
+
+<p>Two</p>
+Give feedback
+p:not(.active) {
+    color: gray;
+}
+20. Empty Selector
+<div></div>
+
+<div>Hello</div>
+Give feedback
+div:empty {
+    border: 1px solid red;
+}
+21. Hover
+button:hover {
+    background: blue;
+    color: white;
+}
+22. Focus
+input:focus {
+    border: 2px solid blue;
+}
+23. Active
+button:active {
+    transform: scale(0.95);
+}
+24. Checked
+<input type="checkbox" checked>
+Give feedback
+input:checked {
+    width: 30px;
+}
+25. Disabled
+input:disabled {
+    background: lightgray;
+}
+26. Enabled
+input:enabled {
+    border: 2px solid green;
+}
+27. Required
+input:required {
+    border-left: 5px solid red;
+}
+28. Valid
+input:valid {
+    border-color: green;
+}
+29. Invalid
+input:invalid {
+    border-color: red;
+}
+30. Root Selector
+:root {
+    --primary: blue;
+    --secondary: green;
+}
+
+Use variables like:
+
+h1 {
+    color: var(--primary);
+}
+31. Before
+h1::before {
+    content: "$ ";
+}
+32. After
+h1::after {
+    content: " $";
+}
+33. First Letter
+p::first-letter {
+    font-size: 40px;
+}
+34. First Line
+p::first-line {
+    color: blue;
+}
+35. Selection
+::selection {
+    background: yellow;
+    color: red;
+}
+36. Placeholder
+input::placeholder {
+    color: gray;
+}
+Selector Specificity (Very Important)
+
+When multiple selectors target the same element, CSS uses specificity to decide which rule wins.
+
+Selector	Specificity
+Universal (*)	0
+Element (h1)	1
+Class (.title)	10
+Attribute ([type="text"])	10
+Pseudo-class (:hover)	10
+ID (#header)	100
+Inline style	1000
+!important	Overrides normal specificity (use sparingly)
+
+Example:
+
+<h1 id="main" class="title">
+    Hello
+</h1>
+Give feedback
+h1 {
+    color: red;
+}
+
+.title {
+    color: blue;
+}
+
+#main {
+    color: green;
+}
+
+The text will be green because the ID selector has the highest specificity among these rules.
+
+Professional Selector Cheat Sheet
+Selector	Example	Purpose
+Universal	*	All elements
+Element	h1	Tag selector
+Class	.card	Reusable styles
+ID	#header	Unique element
+Group	h1, p	Multiple selectors
+Descendant	div p	Any nested descendant
+Child	div > p	Direct child only
+Adjacent sibling	h1 + p	Immediate next sibling
+General sibling	h1 ~ p	All following siblings
+Attribute	input[type="text"]	Match attributes
+Pseudo-class	button:hover	Element state
+Pseudo-element	p::before	Part of an element
+Recommended Learning Order
+Universal selector
+Element selector
+Class selector
+ID selector
+Group selector
+Descendant selector
+Child selector
+Sibling selectors (+, ~)
+Attribute selectors
+Pseudo-classes (:hover, :focus, :nth-child, etc.)
+Pseudo-elements (::before, ::after, etc.)
+Specificity and the CSS cascade
+
+Mini Responsive Example
+HTML
+<div class="cards">
+    <div class="card">HTML</div>
+    <div class="card">CSS</div>
+    <div class="card">JavaScript</div>
+</div>
+Give feedback
+CSS
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+This layout automatically adapts to the available screen width without requiring media queries.
+
+Industry Best Practices
+Start with a mobile-first approach.
+Use Flexbox for one-dimensional layouts (rows or columns).
+Use CSS Grid for two-dimensional layouts.
+Prefer relative units like %, rem, vw, and vh over fixed px where appropriate.
+Make images responsive using max-width: 100%.
+Use auto-fit/auto-fill with minmax() for flexible grid layouts.
+Use media queries only when the design truly needs them.
+Test on real devices and in browser developer tools.
+
+Once you're comfortable with these concepts, you can build responsive landing pages, dashboards, e-commerce sites, and React applications that work well across a wide range of screen sizes.
+
+Units in CSS
+
+Understanding CSS Units is essential for creating responsive, accessible, and maintainable websites. Professional developers choose units based on the problem they're solving rather than using px everywhere.
+
+CSS Units
+
+CSS units define the size of elements such as width, height, margin, padding, font-size, and spacing.
+
+There are two main categories:
+
+CSS Units
+│
+├── Absolute Units
+│      ├── px
+│      ├── cm
+│      ├── mm
+│      ├── in
+│      ├── pt
+│      └── pc
+│
+└── Relative Units
+       ├── %
+       ├── em
+       ├── rem
+       ├── vw
+       ├── vh
+       ├── vmin
+       ├── vmax
+       ├── ch
+       ├── ex
+       └── fr
+1. Pixels (px)
+
+The most commonly used absolute unit.
+
+.box {
+    width: 300px;
+    height: 150px;
+}
+Fixed size
+Does not scale automatically with parent size
+Good for borders, icons, and small UI elements
+Example
+<div class="box"></div>
+Give feedback
+.box {
+    width: 200px;
+    height: 100px;
+    background: blue;
+}
+2. Percentage (%)
+
+Relative to the parent element.
+
+HTML
+<div class="parent">
+    <div class="child"></div>
+</div>
+Give feedback
+CSS
+.parent {
+    width: 600px;
+}
+
+.child {
+    width: 50%;
+}
+
+Calculation:
+
+50% of 600px = 300px
+
+Useful for:
+
+Responsive layouts
+Widths
+Heights (when the parent has a defined height)
+3. em
+
+Relative to the parent's font size.
+
+.parent {
+    font-size: 20px;
+}
+
+.child {
+    font-size: 2em;
+}
+
+Result:
+
+2 × 20px = 40px
+
+Nested elements can compound:
+
+.parent {
+    font-size: 20px;
+}
+
+.child {
+    font-size: 2em;
+}
+
+.grandchild {
+    font-size: 2em;
+}
+Parent = 20px
+Child = 40px
+Grandchild = 80px
+
+This compounding is why em requires careful use.
+
+4. rem - Relative to the root (html) font size
+html {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+Result: 2 × 16px = 32px
+# Unlike em, rem is not affected by nesting
+
+# Most developers use:
+- rem for font sizes
+- rem for spacing
+- rem for padding and margins
+
+# 5. Viewport Width (vw) - Relative to the browser width
+1vw = 1% of viewport width
+.hero {
+    width: 50vw;
+}
+
+If the browser is 1200px wide: 50vw = 600px
+Useful for:
+- Hero sections
+- Responsive typography
+- Full-width layouts
+
+# 6. Viewport Height (vh) - Relative to the browser height
+# 1vh = 1% of viewport height
+.hero {
+    height: 100vh;
+}
+
+-> The section fills the entire visible screen
+
+7. vmin - Uses the smaller of the viewport width or height
+# Example:
+Viewport:
+Width = 1200px
+Height = 800px
+
+1vmin = 8px
+
+-> Useful for elements that should scale based on the smaller screen dimension
+
+8. vmaxv- Uses the larger viewport dimension
+
+Example:
+Viewport:
+Width = 1200px
+
+Height = 800px
+
+1vmax = 12px
+
+9. ch - Based on the width of the "0" character
+
+input {
+    width: 30ch;
+}
+
+Useful for:
+- Forms
+- Text inputs
+- Code editors
+
+# 10. ex - Based on the height of the lowercase "x"
+font-size: 3ex;
+# Rarely used in modern web development
+
+11. fr (Fraction) - Used only with CSS Grid
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+Layout:
+|-----|----------|-----|
+   1fr     2fr      1fr
+
+# The middle column is twice as wide as the others
+
+12. Auto - Allows the browser to calculate the value
+.container {
+    margin: auto;
+} -> A common way to center block elements
+
+13. fit-content - Element grows only as much as its content needs
+button {
+    width: fit-content;
+}
+
+14. min-content - Shrinks to the smallest width that still fits the content
+width: min-content;
+# Mostly used with CSS Grid and Flexbox
+
+15. max-content - Expands to fit the content without wrapping
+width: max-content;
+
+### Practical Comparison chudandii:
+.box1 {
+    width: 300px;
+}
+
+.box2 {
+    width: 50%;
+}
+
+.box3 {
+    width: 50vw;
+}
+
+.box4 {
+    width: 20rem;
+}
+
+ Unit       Relative To         
+ px   | Fixed size          
+ %    | Parent               
+ em   | Parent font size     
+ rem  | Root font size     
+ vw   | Viewport width     
+ vh   | Viewport height     
+ fr   | Available grid space 
+
+## Which Units Should You Use mari?
+# Font Size
+font-size: 1rem;
+
+Avoid:
+font-size: 16px;
+
+# Width
+Responsive:
+width: 100%;
+max-width: 1200px;
+
+# Height
+height: 100vh;
+-> Great for full-screen sections
+
+# Padding
+padding: 1rem;
+
+# Margin
+margin: 2rem;
+
+# Grid
+grid-template-columns: repeat(3, 1fr);
+
+# Images
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#### Saree oka Example chudhama
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.hero p {
+    font-size: 1.125rem;
+    max-width: 60ch;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+## This combines several modern units:
+% for responsive container width
+rem for consistent spacing and typography
+vh for a full-screen hero section
+ch for readable line lengths
+fr for flexible grid columns
+clamp() for responsive text sizing
+
+ Use Case                 Recommended Unit          
+ Font size            | rem                     
+ Margins & Padding    | rem                     
+ Container width      | % + max-width         
+ Images               | % + max-width: 100%  
+ Full-screen sections | vh                      
+ Responsive text      | clamp() with rem/vw 
+ CSS Grid columns     | fr                      
+ Input width          | ch                      
+ Borders              | px                      
+
+## Rule of Thumb
+- Use rem for typography and spacing
+- Use % for flexible layouts
+- Use vw and vh when sizing relative to the viewport
+- Use fr in CSS Grid
+- Use px sparingly for elements that truly need fixed dimensions, such as thin borders or small icons
