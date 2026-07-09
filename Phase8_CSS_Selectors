@@ -1,0 +1,60 @@
+### CSS Selectors with HTML
+
+-> A CSS selector tells the browser: 'Select this HTML element and apply these styles"
+# Example:
+# HTML
+<h1>Welcome to Algonex</h1>
+# CSS
+h1 {
+    color: blue;
+}  --> The <h1> text becomes blue
+
+1. Universal Selector (*) - Selects every element on the page
+
+# HTML
+<h1>Heading</h1>
+<p>Paragraph</p>
+<button>Click Me</button>
+
+# CSS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} -> Used in almost every professional project as a CSS reset
+
+2. Element (Tag) Selector - Targets every occurrence of a specific HTML tag.
+# HTML
+<h1>Heading</h1>
+<h1>Another Heading</h1>
+<p>Paragraph</p>
+
+# CSS
+h1 {
+    color: red;
+}
+p {
+    color: green;
+}
+
+3. Class Selector (.) - One of the most commonly used selectors.
+# HTML
+<h1 class="title">Welcome</h1>
+<h2 class="title">Frontend</h2>
+
+# CSS
+.title {
+    color: blue;
+} -> Both elements are styled
+
+4. ID Selector (#) - Targets a single unique element
+# HTML
+<h1 id="main-title">
+    Welcome
+</h1>
+
+# CSS
+#main-title {
+    color: purple;
+} -> IDs should generally be unique within a page
+
