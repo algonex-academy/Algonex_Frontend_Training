@@ -55,6 +55,16 @@ Frontend/
 # Why index.html?
 Because almost every web server treats it as the default entry page
 
+    Shortcut                   Purpose                
+ ! + Tab chesthee   | HTML boilerplate vasthundi
+ Ctrl + /           | Comment                
+ Alt + Shift + Down | Duplicate line         
+ Alt + Up/Down      | Move line              
+ Ctrl + D           | Select next occurrence 
+ Shift + Alt + F    | Format document        
+ Ctrl + Space       | IntelliSense           
+
+
 ## HTML Boilerplate
 <!DOCTYPE html>
 <html lang="en">
